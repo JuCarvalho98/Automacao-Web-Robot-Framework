@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.2 (Python 3.10.1 on win32)" generated="20220111 17:09:55.446" rpa="false" schemaversion="2">
+<suite id="s1" name="Site" source="C:\project\TreinoWEB\tests\site.robot">
+<test id="s1-t1" name="Funcionalidade: Criar um usuário válido">
+<kw name="Abrir navegador" library="base" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220111 17:09:55.636" level="INFO">Opening browser 'chrome' to base url 'https://automacaocombatista.herokuapp.com/treinamento/home'.</msg>
+<status status="PASS" starttime="20220111 17:09:55.636" endtime="20220111 17:10:01.853"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220111 17:10:01.854" endtime="20220111 17:10:01.970"/>
+</kw>
+<status status="PASS" starttime="20220111 17:09:55.636" endtime="20220111 17:10:01.970"/>
+</kw>
+<kw name="Dado que eu esteja na home do site" library="home">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${HOME_TITLE}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20220111 17:10:01.979" level="INFO">Page title is 'Automação com Batista'.</msg>
+<status status="PASS" starttime="20220111 17:10:01.973" endtime="20220111 17:10:01.979"/>
+</kw>
+<status status="PASS" starttime="20220111 17:10:01.972" endtime="20220111 17:10:01.979"/>
+</kw>
+<kw name="Quando clicar no menu formulário" library="home">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${FORMULARIO_BTN}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220111 17:10:01.980" endtime="20220111 17:10:01.999"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FORMULARIO_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220111 17:10:02.000" level="INFO">Clicking element 'xpath=//a[contains(text(),'Formulário')]'.</msg>
+<status status="PASS" starttime="20220111 17:10:01.999" endtime="20220111 17:10:02.044"/>
+</kw>
+<status status="PASS" starttime="20220111 17:10:01.980" endtime="20220111 17:10:02.044"/>
+</kw>
+<kw name="E clicar no link usuários" library="home">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${CRIAR_USUARIO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220111 17:10:02.045" endtime="20220111 17:10:02.072"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CRIAR_USUARIO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220111 17:10:02.073" level="INFO">Clicking element 'xpath=//a[contains(text(),'Criar Usuários')]'.</msg>
+<status status="PASS" starttime="20220111 17:10:02.072" endtime="20220111 17:10:02.464"/>
+</kw>
+<status status="PASS" starttime="20220111 17:10:02.045" endtime="20220111 17:10:02.464"/>
+</kw>
+<kw name="E preencher as informações" library="users">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NOME}</arg>
+<arg>Roberto</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220111 17:10:02.465" level="INFO">Typing text 'Roberto' into text field 'id=user_name'.</msg>
+<status status="PASS" starttime="20220111 17:10:02.464" endtime="20220111 17:10:02.539"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${SOBRENOME}</arg>
+<arg>Carvalho</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220111 17:10:02.540" level="INFO">Typing text 'Carvalho' into text field 'id=user_lastname'.</msg>
+<status status="PASS" starttime="20220111 17:10:02.539" endtime="20220111 17:10:02.612"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${EMAIL}</arg>
+<arg>jmarcosviniciusteixeira2@hotmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220111 17:10:02.612" level="INFO">Typing text 'jmarcosviniciusteixeira2@hotmail.com' into text field 'id=user_email'.</msg>
+<status status="PASS" starttime="20220111 17:10:02.612" endtime="20220111 17:10:02.712"/>
+</kw>
+<status status="PASS" starttime="20220111 17:10:02.464" endtime="20220111 17:10:02.712"/>
+</kw>
+<kw name="E clicar no botão criar" library="users">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${BOTAO_CRIAR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220111 17:10:02.713" endtime="20220111 17:10:02.728"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BOTAO_CRIAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220111 17:10:02.728" level="INFO">Clicking element 'css=.actions'.</msg>
+<status status="PASS" starttime="20220111 17:10:02.728" endtime="20220111 17:10:03.662"/>
+</kw>
+<status status="PASS" starttime="20220111 17:10:02.712" endtime="20220111 17:10:03.662"/>
+</kw>
+<kw name="Então a mensagem &quot;Usuário Criado com sucesso&quot; deve ser exibida" library="users" sourcename="Então a mensagem &quot;${MENSAGEM}&quot; deve ser exibida">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${MENSAGEM_SUCESSO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220111 17:10:03.663" endtime="20220111 17:10:03.682"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${MENSAGEM_SUCESSO}</arg>
+<arg>${MENSAGEM}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220111 17:10:03.683" level="INFO">Verifying element 'id=notice' contains exact text 'Usuário Criado com sucesso'.</msg>
+<status status="PASS" starttime="20220111 17:10:03.683" endtime="20220111 17:10:03.700"/>
+</kw>
+<status status="PASS" starttime="20220111 17:10:03.663" endtime="20220111 17:10:03.700"/>
+</kw>
+<kw name="Fechar navegador" library="base" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220111 17:10:03.701" endtime="20220111 17:10:05.814"/>
+</kw>
+<status status="PASS" starttime="20220111 17:10:03.701" endtime="20220111 17:10:05.814"/>
+</kw>
+<status status="PASS" starttime="20220111 17:09:55.636" endtime="20220111 17:10:05.815"/>
+</test>
+<test id="s1-t2" name="Funcionalidade: Listar usuários">
+<kw name="Abrir navegador" library="base" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220111 17:10:05.819" level="INFO">Opening browser 'chrome' to base url 'https://automacaocombatista.herokuapp.com/treinamento/home'.</msg>
+<status status="PASS" starttime="20220111 17:10:05.818" endtime="20220111 17:10:13.989"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220111 17:10:13.989" endtime="20220111 17:10:14.110"/>
+</kw>
+<status status="PASS" starttime="20220111 17:10:05.817" endtime="20220111 17:10:14.110"/>
+</kw>
+<kw name="Dado que eu esteja na home do site" library="home">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${HOME_TITLE}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20220111 17:10:14.116" level="INFO">Page title is 'Automação com Batista'.</msg>
+<status status="PASS" starttime="20220111 17:10:14.112" endtime="20220111 17:10:14.116"/>
+</kw>
+<status status="PASS" starttime="20220111 17:10:14.112" endtime="20220111 17:10:14.116"/>
+</kw>
+<kw name="Quando clicar no menu formulário" library="home">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${FORMULARIO_BTN}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220111 17:10:14.117" endtime="20220111 17:10:14.141"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FORMULARIO_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220111 17:10:14.142" level="INFO">Clicking element 'xpath=//a[contains(text(),'Formulário')]'.</msg>
+<status status="PASS" starttime="20220111 17:10:14.141" endtime="20220111 17:10:14.180"/>
+</kw>
+<status status="PASS" starttime="20220111 17:10:14.117" endtime="20220111 17:10:14.180"/>
+</kw>
+<kw name="E clicar no listar usuários" library="home">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${LISTA_USUARIO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220111 17:10:14.181" endtime="20220111 17:10:14.435"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${LISTA_USUARIO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220111 17:10:14.436" level="INFO">Clicking element 'xpath=//a[contains(text(),'Lista de Usuários')]'.</msg>
+<status status="PASS" starttime="20220111 17:10:14.435" endtime="20220111 17:10:15.269"/>
+</kw>
+<status status="PASS" starttime="20220111 17:10:14.181" endtime="20220111 17:10:15.269"/>
+</kw>
+<kw name="Então deve ser exibida uma lista com todos usuários cadastrados" library="users">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${LISTA_USUARIO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220111 17:10:15.271" endtime="20220111 17:10:15.285"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${LISTA_USUARIO}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220111 17:10:15.297" level="INFO">Element 'xpath=//a[contains(text(),'Lista de Usuários')]' is displayed.</msg>
+<status status="PASS" starttime="20220111 17:10:15.286" endtime="20220111 17:10:15.297"/>
+</kw>
+<status status="PASS" starttime="20220111 17:10:15.271" endtime="20220111 17:10:15.298"/>
+</kw>
+<kw name="Fechar navegador" library="base" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220111 17:10:15.298" endtime="20220111 17:10:17.409"/>
+</kw>
+<status status="PASS" starttime="20220111 17:10:15.298" endtime="20220111 17:10:17.409"/>
+</kw>
+<status status="PASS" starttime="20220111 17:10:05.817" endtime="20220111 17:10:17.411"/>
+</test>
+<test id="s1-t3" name="Funcionalidade: Excluir um Usuário">
+<kw name="Abrir navegador" library="base" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220111 17:10:17.413" level="INFO">Opening browser 'chrome' to base url 'https://automacaocombatista.herokuapp.com/treinamento/home'.</msg>
+<status status="PASS" starttime="20220111 17:10:17.412" endtime="20220111 17:10:22.516"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220111 17:10:22.517" endtime="20220111 17:10:22.641"/>
+</kw>
+<status status="PASS" starttime="20220111 17:10:17.412" endtime="20220111 17:10:22.641"/>
+</kw>
+<kw name="Dado que esteja na lista de usuarios" library="home">
+<kw name="Quando clicar no menu formulário" library="home">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${FORMULARIO_BTN}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220111 17:10:22.643" endtime="20220111 17:10:22.667"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FORMULARIO_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220111 17:10:22.668" level="INFO">Clicking element 'xpath=//a[contains(text(),'Formulário')]'.</msg>
+<status status="PASS" starttime="20220111 17:10:22.668" endtime="20220111 17:10:22.702"/>
+</kw>
+<status status="PASS" starttime="20220111 17:10:22.642" endtime="20220111 17:10:22.702"/>
+</kw>
+<kw name="E clicar no listar usuários" library="home">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${LISTA_USUARIO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220111 17:10:22.703" endtime="20220111 17:10:22.946"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${LISTA_USUARIO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220111 17:10:22.947" level="INFO">Clicking element 'xpath=//a[contains(text(),'Lista de Usuários')]'.</msg>
+<status status="PASS" starttime="20220111 17:10:22.947" endtime="20220111 17:10:23.639"/>
+</kw>
+<status status="PASS" starttime="20220111 17:10:22.703" endtime="20220111 17:10:23.639"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${MENSAGEM_LISTA_USUARIO}</arg>
+<arg>Lista de Usuários!!</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220111 17:10:23.640" level="INFO">Verifying element 'xpath=//h5' contains exact text 'Lista de Usuários!!'.</msg>
+<status status="PASS" starttime="20220111 17:10:23.639" endtime="20220111 17:10:23.663"/>
+</kw>
+<status status="PASS" starttime="20220111 17:10:22.642" endtime="20220111 17:10:23.663"/>
+</kw>
+<kw name="Quando clicar na paginação ultima pagina" library="users">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${ULTIMA_PAGINA}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220111 17:10:23.664" endtime="20220111 17:10:23.682"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ULTIMA_PAGINA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220111 17:10:23.682" level="INFO">Clicking element 'xpath=//a[contains(text(),'Último')]'.</msg>
+<status status="PASS" starttime="20220111 17:10:23.682" endtime="20220111 17:10:23.715"/>
+</kw>
+<status status="PASS" starttime="20220111 17:10:23.664" endtime="20220111 17:10:23.715"/>
+</kw>
+<kw name="E clicar no icone delete" library="users">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${BOTAO_DELETE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220111 17:10:23.716" endtime="20220111 17:10:23.733"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BOTAO_DELETE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220111 17:10:23.734" level="INFO">Clicking element 'xpath=(//a[contains(text(),'delete')])[2]'.</msg>
+<status status="PASS" starttime="20220111 17:10:23.733" endtime="20220111 17:10:23.762"/>
+</kw>
+<status status="PASS" starttime="20220111 17:10:23.716" endtime="20220111 17:10:23.762"/>
+</kw>
+<kw name="E clicar em ok" library="users">
+<kw name="Handle Alert" library="SeleniumLibrary">
+<arg>ACCEPT</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<msg timestamp="20220111 17:10:23.762" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<status status="PASS" starttime="20220111 17:10:23.762" endtime="20220111 17:10:23.765"/>
+</kw>
+<status status="PASS" starttime="20220111 17:10:23.762" endtime="20220111 17:10:23.765"/>
+</kw>
+<kw name="Então o usuario deve ser removido da lista" library="users">
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${NOME_EXCLUIDO}</arg>
+<arg>Seu Usuário foi removido com sucesso!</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220111 17:10:23.766" level="INFO">Verifying element 'id=notice' contains exact text 'Seu Usuário foi removido com sucesso!'.</msg>
+<status status="PASS" starttime="20220111 17:10:23.766" endtime="20220111 17:10:24.174"/>
+</kw>
+<status status="PASS" starttime="20220111 17:10:23.766" endtime="20220111 17:10:24.175"/>
+</kw>
+<kw name="Fechar navegador" library="base" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220111 17:10:24.176" endtime="20220111 17:10:26.297"/>
+</kw>
+<status status="PASS" starttime="20220111 17:10:24.175" endtime="20220111 17:10:26.297"/>
+</kw>
+<status status="PASS" starttime="20220111 17:10:17.412" endtime="20220111 17:10:26.298"/>
+</test>
+<doc>Cenários de testes para página de usuários</doc>
+<status status="PASS" starttime="20220111 17:09:55.447" endtime="20220111 17:10:26.302"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Site">Site</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
